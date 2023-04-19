@@ -25,6 +25,8 @@ def main():
                     continue
 
             df = pd.DataFrame(product_prices, columns=['Site', 'URL', 'Price'])
+            df = df.sort_values(by="Price", ascending=False)
+            df = df.head(50)
 
         st.markdown("### Prices found:")
         st.write(df)

@@ -16,6 +16,7 @@ def extract_prices(url):
     prices = []
 
     for match in price_regex.finditer(soup.text):
+        price = float(match.group(1).replace("$", ""))
         prices.append((site_title, url, match.group(1)))
 
     return prices
