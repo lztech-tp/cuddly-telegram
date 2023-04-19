@@ -2,3 +2,5 @@ numpy>=1.19.2
 pandas>=1.2.1
 streamlit>=1.8.1
 matplotlib>=3.4.3
+googlesearch-python>=1.0.0
+bs4
