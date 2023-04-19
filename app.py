@@ -24,7 +24,7 @@ def main():
                 except:
                     continue
 
-            df = pd.DataFrame(product_prices, columns=['Site', 'URL', 'Price'])
+            df = pd.DataFrame(product_prices, columns=['Price', 'URL'])
             df = df.sort_values(by="Price", ascending=False)
             df = df.head(50)
 
