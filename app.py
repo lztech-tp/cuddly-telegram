@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from ggsearch import google_search
 from extract_prices import extract_prices
 
@@ -23,9 +24,10 @@ def main():
                 except:
                     continue
 
+            df = pd.DataFrame(product_prices, columns=['Site', 'URL', 'Price'])
+
         st.markdown("### Prices found:")
-        for price in product_prices:
-            st.write(f"{price[2]} - {price[0]} - [Source]({price[1]})")
+        st.write(df)
 
 if __name__ == "__main__":
     main()
